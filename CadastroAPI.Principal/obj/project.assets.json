@@ -2922,11 +2922,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Repositorio\\BackEnd\\BackEnd\\CadastroAPI.csproj",
+      "projectUniqueName": "D:\\Repositorio\\BackEnd\\CadastroAPI.Principal\\CadastroAPI.csproj",
       "projectName": "CadastroAPI",
-      "projectPath": "D:\\Repositorio\\BackEnd\\BackEnd\\CadastroAPI.csproj",
+      "projectPath": "D:\\Repositorio\\BackEnd\\CadastroAPI.Principal\\CadastroAPI.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "D:\\Repositorio\\BackEnd\\BackEnd\\obj\\",
+      "outputPath": "D:\\Repositorio\\BackEnd\\CadastroAPI.Principal\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -7062,8 +7062,8 @@
     },
     "CadastroAPI/1.0.0": {
       "type": "project",
-      "path": "../BackEnd/CadastroAPI.csproj",
-      "msbuildProject": "../BackEnd/CadastroAPI.csproj"
+      "path": "../CadastroAPI.Principal/CadastroAPI.csproj",
+      "msbuildProject": "../CadastroAPI.Principal/CadastroAPI.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -7102,8 +7102,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Repositorio\\BackEnd\\BackEnd\\CadastroAPI.csproj": {
-              "projectPath": "D:\\Repositorio\\BackEnd\\BackEnd\\CadastroAPI.csproj"
+            "D:\\Repositorio\\BackEnd\\CadastroAPI.Principal\\CadastroAPI.csproj": {
+              "projectPath": "D:\\Repositorio\\BackEnd\\CadastroAPI.Principal\\CadastroAPI.csproj"
             }
           }
         }

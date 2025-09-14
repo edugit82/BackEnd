@@ -62,7 +62,7 @@ namespace BackEnd
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowSpecificOrigin",
-                    builder => builder.WithOrigins("http://localhost:3000")
+                    builder => builder.WithOrigins("http://20.3.237.173:3000")
                                       .AllowAnyHeader()
                                       .AllowAnyMethod());
             });

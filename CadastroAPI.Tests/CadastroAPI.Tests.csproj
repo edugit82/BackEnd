@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BackEnd\CadastroAPI.csproj" />
+    <ProjectReference Include="..\CadastroAPI.Principal\CadastroAPI.csproj" />
   </ItemGroup>
 
 </Project>

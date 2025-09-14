@@ -131,3 +131,4 @@ D:\Repositorio\BackEnd\CadastroAPI.Tests\bin\Debug\net8.0\System.Diagnostics.Dia
 D:\Repositorio\BackEnd\CadastroAPI.Tests\bin\Debug\net8.0\Swashbuckle.AspNetCore.Annotations.dll
 d:\Repositorio\BackEnd\CadastroAPI.Tests\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll
 D:\Repositorio\BackEnd\CadastroAPI.Tests\bin\Debug\net8.0\.msCoverageSourceRootsMapping_CadastroAPI.Tests
+D:\Repositorio\BackEnd\CadastroAPI.Tests\obj\Debug\net8.0\CadastroAPI.Tests.sourcelink.json
