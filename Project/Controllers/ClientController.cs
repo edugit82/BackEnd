@@ -27,7 +27,7 @@ namespace Project.Controllers
                 var clients = await _context.Clients.ToListAsync();
                 return Ok(clients);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // Log the exception
                 return StatusCode(500, "Ocorreu um erro interno ao buscar os clientes.");
@@ -48,7 +48,7 @@ namespace Project.Controllers
 
                 return Ok(client);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // Log the exception
                 return StatusCode(500, "Ocorreu um erro interno ao buscar o cliente.");
@@ -80,7 +80,7 @@ namespace Project.Controllers
                     throw;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // Log the exception
                 return StatusCode(500, "Ocorreu um erro interno ao atualizar o cliente.");
@@ -105,7 +105,7 @@ namespace Project.Controllers
 
                 return NoContent();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // Log the exception
                 return StatusCode(500, "Ocorreu um erro interno ao excluir o cliente.");
@@ -127,7 +127,7 @@ namespace Project.Controllers
 
                 return Ok("Dados do cliente recebidos com sucesso!");
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // Log the exception (e.g., using a logger)
                 return StatusCode(500, "Ocorreu um erro interno ao processar sua solicitação.");
