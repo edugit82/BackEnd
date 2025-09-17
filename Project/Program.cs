@@ -44,6 +44,17 @@ builder.Services.AddDbContext<Project.Data.ApplicationDbContext>(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: "AllowSpecificOrigin",
+                      builder =>
+                      {
+                          builder.WithOrigins("http://20.3.237.173:3000")
+                                 .AllowAnyHeader()
+                                 .AllowAnyMethod();
+                      });
+});
+
 builder.Services.AddSingleton<IMessageProducer, RabbitMQProducer>();
 builder.Services.AddSingleton<IMessageConsumer, RabbitMQConsumer>();
 builder.Services.AddHostedService<RabbitMQConsumerService>();
@@ -64,6 +75,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.UseCors();
+app.UseCors("AllowSpecificOrigin");
 
 app.Run();
