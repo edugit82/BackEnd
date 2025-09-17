@@ -47,16 +47,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<IMessageProducer, RabbitMQProducer>();
 builder.Services.AddSingleton<IMessageConsumer, RabbitMQConsumer>();
 builder.Services.AddHostedService<RabbitMQConsumerService>();
-
-builder.Services.AddCors(options =>
-{    
-    options.AddDefaultPolicy(policy =>
-    {
-        policy.WithOrigins("http://20.3.237.173:3000")
-              .AllowAnyHeader()
-              .AllowAnyMethod();
-    });
-});
+builder.Services.AddScoped<IClientService, ClientService>();
 
 var app = builder.Build();
 

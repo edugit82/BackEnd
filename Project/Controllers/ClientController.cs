@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Project.Messaging;
 using System.Text.Json;
 using Project.Services;
+using Microsoft.Extensions.Logging; // Adicionar este using
 
 namespace Project.Controllers
 {
@@ -16,10 +17,18 @@ namespace Project.Controllers
     public class ClientController : ControllerBase
     {
         private readonly ApplicationDbContext _context;        
+        private readonly IMessageProducer _messageProducer; // Adicionar este campo
+        private readonly IRedisCacheService _redisCache; // Adicionar este campo
+        private readonly ILogger<ClientController> _logger; // Adicionar este campo
+        private readonly IClientService _clientService; // Adicionar este campo
 
-        public ClientController(ApplicationDbContext context, IMessageProducer messageProducer, IRedisCacheService redisCache)
+        public ClientController(ApplicationDbContext context, IMessageProducer messageProducer, IRedisCacheService redisCache, ILogger<ClientController> logger, IClientService clientService)
         {
             _context = context;            
+            _messageProducer = messageProducer; // Inicializar
+            _redisCache = redisCache; // Inicializar
+            _logger = logger; // Inicializar
+            _clientService = clientService; // Inicializar
         }
 
         [HttpGet]
@@ -125,14 +134,14 @@ namespace Project.Controllers
 
             try
             {
-                _context.Clients.Add(client);
-                await _context.SaveChangesAsync();                
+                var clientJson = JsonSerializer.Serialize(client);
+                await _clientService.AddClientAsync(clientJson);
 
                 return Ok("Dados do cliente recebidos com sucesso!");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                // Log the exception (e.g., using a logger)
+                _logger.LogError(ex, "Ocorreu um erro interno ao processar sua solicitação.");
                 return StatusCode(500, "Ocorreu um erro interno ao processar sua solicitação.");
             }
         }

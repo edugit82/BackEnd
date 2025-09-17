@@ -17,7 +17,7 @@ namespace Project.Models
         public required string Email { get; set; }
 
         [Required(ErrorMessage = "O CPF é obrigatório.")]
-        [StringLength(11, MinimumLength = 11, ErrorMessage = "O CPF deve ter 11 dígitos.")]
+        [StringLength(14, MinimumLength = 11, ErrorMessage = "O CPF deve ter 11 dígitos.")]
         public required string CPF { get; set; }
 
         [Required(ErrorMessage = "O telefone é obrigatório.")]

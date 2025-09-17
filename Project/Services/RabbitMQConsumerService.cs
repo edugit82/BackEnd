@@ -2,24 +2,24 @@ using Microsoft.Extensions.Hosting;
 using System.Threading;
 using System.Threading.Tasks;
 using Project.Messaging;
-using Microsoft.Extensions.DependencyInjection;
-using System;
 
 namespace Project.Services
 {
     public class RabbitMQConsumerService : BackgroundService
     {
+        private readonly ILogger<RabbitMQConsumerService> _logger;
         private readonly IServiceProvider _serviceProvider;
-        private IMessageConsumer _consumer = null!;
+        private IMessageConsumer _consumer;
 
-        public RabbitMQConsumerService(IServiceProvider serviceProvider)
+        public RabbitMQConsumerService(ILogger<RabbitMQConsumerService> logger, IServiceProvider serviceProvider)
         {
+            _logger = logger;
             _serviceProvider = serviceProvider;
         }
 
-        protected override Task ExecuteAsync(CancellationToken stoppingToken)
+        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            stoppingToken.ThrowIfCancellationRequested();
+            _logger.LogInformation("RabbitMQ Consumer Service running.");
 
             using (var scope = _serviceProvider.CreateScope())
             {
@@ -27,7 +27,7 @@ namespace Project.Services
                 _consumer.StartConsuming();
             }
 
-            return Task.CompletedTask;
+            await Task.CompletedTask;
         }
 
         public override async Task StopAsync(CancellationToken stoppingToken)
