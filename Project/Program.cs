@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Project.Configurations;
+using Project.Messaging;
 using Project.Services;
 using StackExchange.Redis;
 
@@ -42,6 +43,27 @@ builder.Services.AddDbContext<Project.Data.ApplicationDbContext>(options =>
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddSingleton<IMessageProducer, RabbitMQProducer>();
+builder.Services.AddSingleton<IMessageConsumer, RabbitMQConsumer>();
+builder.Services.AddHostedService<RabbitMQConsumerService>();
+
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+    {
+        policy.WithOrigins("http://localhost:3000")
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+
+    options.AddDefaultPolicy(policy =>
+    {
+        policy.WithOrigins("http://20.3.237.173:3000")
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
 
 var app = builder.Build();
 

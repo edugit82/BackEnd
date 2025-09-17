@@ -5,6 +5,9 @@ using System.ComponentModel.DataAnnotations;
 using Project.Data;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Project.Messaging;
+using System.Text.Json;
+using Project.Services;
 
 namespace Project.Controllers
 {
@@ -12,11 +15,11 @@ namespace Project.Controllers
     [Route("[controller]")]
     public class ClientController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+        private readonly ApplicationDbContext _context;        
 
-        public ClientController(ApplicationDbContext context)
+        public ClientController(ApplicationDbContext context, IMessageProducer messageProducer, IRedisCacheService redisCache)
         {
-            _context = context;
+            _context = context;            
         }
 
         [HttpGet]
@@ -44,7 +47,7 @@ namespace Project.Controllers
                 if (client == null)
                 {
                     return NotFound("Cliente não encontrado.");
-                }
+                }                
 
                 return Ok(client);
             }
@@ -67,7 +70,7 @@ namespace Project.Controllers
 
             try
             {
-                await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();                
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -101,7 +104,7 @@ namespace Project.Controllers
                 }
 
                 _context.Clients.Remove(client);
-                await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();                
 
                 return NoContent();
             }
@@ -123,7 +126,7 @@ namespace Project.Controllers
             try
             {
                 _context.Clients.Add(client);
-                await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();                
 
                 return Ok("Dados do cliente recebidos com sucesso!");
             }

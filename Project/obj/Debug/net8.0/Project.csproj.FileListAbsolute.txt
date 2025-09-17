@@ -1,3 +1,11 @@
+D:\Repositorio\BackEnd\Project\obj\Debug\net8.0\Project.csproj.AssemblyReference.cache
+D:\Repositorio\BackEnd\Project\obj\Debug\net8.0\Project.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repositorio\BackEnd\Project\obj\Debug\net8.0\Project.AssemblyInfoInputs.cache
+D:\Repositorio\BackEnd\Project\obj\Debug\net8.0\Project.AssemblyInfo.cs
+D:\Repositorio\BackEnd\Project\obj\Debug\net8.0\Project.csproj.CoreCompileInputs.cache
+D:\Repositorio\BackEnd\Project\obj\Debug\net8.0\Project.MvcApplicationPartsAssemblyInfo.cs
+D:\Repositorio\BackEnd\Project\obj\Debug\net8.0\Project.MvcApplicationPartsAssemblyInfo.cache
+D:\Repositorio\BackEnd\Project\obj\Debug\net8.0\Project.sourcelink.json
 D:\Repositorio\BackEnd\Project\bin\Debug\net8.0\appsettings.Development.json
 D:\Repositorio\BackEnd\Project\bin\Debug\net8.0\appsettings.json
 D:\Repositorio\BackEnd\Project\bin\Debug\net8.0\Project.exe
@@ -33,6 +41,7 @@ D:\Repositorio\BackEnd\Project\bin\Debug\net8.0\Mono.TextTemplating.dll
 D:\Repositorio\BackEnd\Project\bin\Debug\net8.0\Npgsql.dll
 D:\Repositorio\BackEnd\Project\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 D:\Repositorio\BackEnd\Project\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+D:\Repositorio\BackEnd\Project\bin\Debug\net8.0\RabbitMQ.Client.dll
 D:\Repositorio\BackEnd\Project\bin\Debug\net8.0\StackExchange.Redis.dll
 D:\Repositorio\BackEnd\Project\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\Repositorio\BackEnd\Project\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
@@ -113,14 +122,6 @@ D:\Repositorio\BackEnd\Project\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Worksp
 D:\Repositorio\BackEnd\Project\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\Repositorio\BackEnd\Project\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\Repositorio\BackEnd\Project\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
-D:\Repositorio\BackEnd\Project\obj\Debug\net8.0\Project.csproj.AssemblyReference.cache
-D:\Repositorio\BackEnd\Project\obj\Debug\net8.0\Project.GeneratedMSBuildEditorConfig.editorconfig
-D:\Repositorio\BackEnd\Project\obj\Debug\net8.0\Project.AssemblyInfoInputs.cache
-D:\Repositorio\BackEnd\Project\obj\Debug\net8.0\Project.AssemblyInfo.cs
-D:\Repositorio\BackEnd\Project\obj\Debug\net8.0\Project.csproj.CoreCompileInputs.cache
-D:\Repositorio\BackEnd\Project\obj\Debug\net8.0\Project.MvcApplicationPartsAssemblyInfo.cs
-D:\Repositorio\BackEnd\Project\obj\Debug\net8.0\Project.MvcApplicationPartsAssemblyInfo.cache
-D:\Repositorio\BackEnd\Project\obj\Debug\net8.0\Project.sourcelink.json
 D:\Repositorio\BackEnd\Project\obj\Debug\net8.0\staticwebassets.build.json
 D:\Repositorio\BackEnd\Project\obj\Debug\net8.0\staticwebassets.development.json
 D:\Repositorio\BackEnd\Project\obj\Debug\net8.0\staticwebassets\msbuild.Project.Microsoft.AspNetCore.StaticWebAssets.props

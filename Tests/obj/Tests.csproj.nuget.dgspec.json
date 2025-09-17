@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Repositorio\\BackEnd\\Tests\\Tests.csproj": {}
+    "d:\\Repositorio\\BackEnd\\Tests\\Tests.csproj": {}
   },
   "projects": {
-    "D:\\Repositorio\\BackEnd\\Project\\Project.csproj": {
+    "d:\\Repositorio\\BackEnd\\Project\\Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Repositorio\\BackEnd\\Project\\Project.csproj",
+        "projectUniqueName": "d:\\Repositorio\\BackEnd\\Project\\Project.csproj",
         "projectName": "Project",
-        "projectPath": "D:\\Repositorio\\BackEnd\\Project\\Project.csproj",
+        "projectPath": "d:\\Repositorio\\BackEnd\\Project\\Project.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\Repositorio\\BackEnd\\Project\\obj\\",
+        "outputPath": "d:\\Repositorio\\BackEnd\\Project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -57,6 +57,10 @@
               "target": "Package",
               "version": "[9.0.4, )"
             },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[6.2.2, )"
+            },
             "StackExchange.Redis": {
               "target": "Package",
               "version": "[2.9.17, )"
@@ -89,14 +93,14 @@
         }
       }
     },
-    "D:\\Repositorio\\BackEnd\\Tests\\Tests.csproj": {
+    "d:\\Repositorio\\BackEnd\\Tests\\Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Repositorio\\BackEnd\\Tests\\Tests.csproj",
+        "projectUniqueName": "d:\\Repositorio\\BackEnd\\Tests\\Tests.csproj",
         "projectName": "Tests",
-        "projectPath": "D:\\Repositorio\\BackEnd\\Tests\\Tests.csproj",
+        "projectPath": "d:\\Repositorio\\BackEnd\\Tests\\Tests.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\Repositorio\\BackEnd\\Tests\\obj\\",
+        "outputPath": "d:\\Repositorio\\BackEnd\\Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -111,8 +115,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Repositorio\\BackEnd\\Project\\Project.csproj": {
-                "projectPath": "D:\\Repositorio\\BackEnd\\Project\\Project.csproj"
+              "d:\\Repositorio\\BackEnd\\Project\\Project.csproj": {
+                "projectPath": "d:\\Repositorio\\BackEnd\\Project\\Project.csproj"
               }
             }
           }
@@ -132,9 +136,21 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.9, )"
+            },
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
               "version": "[9.0.9, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
@@ -143,6 +159,10 @@
             "Moq": {
               "target": "Package",
               "version": "[4.20.70, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.4, )"
             },
             "System.Text.Json": {
               "target": "Package",

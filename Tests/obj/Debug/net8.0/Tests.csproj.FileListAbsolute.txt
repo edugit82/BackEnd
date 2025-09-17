@@ -133,3 +133,4 @@ D:\Repositorio\BackEnd\Tests\bin\Debug\net8.0\xunit.abstractions.dll
 D:\Repositorio\BackEnd\Tests\bin\Debug\net8.0\xunit.assert.dll
 D:\Repositorio\BackEnd\Tests\bin\Debug\net8.0\xunit.core.dll
 D:\Repositorio\BackEnd\Tests\bin\Debug\net8.0\xunit.execution.dotnet.dll
+D:\Repositorio\BackEnd\Tests\bin\Debug\net8.0\RabbitMQ.Client.dll
